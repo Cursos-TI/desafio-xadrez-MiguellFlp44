@@ -1,34 +1,68 @@
-#include <stdio.h> // Biblioteca padrão para usar printf
+#include <stdio.h> // Biblioteca para usar printf
 
 int main() {
-    // Movimento da TORRE usando o FOR
-    // A torre se move 5 casas para a direita
+    // ---------------------------
+    // Movimento da TORRE
+    // ---------------------------
+    // A torre anda em linha reta, aqui vamos simular 5 passos para a direita
     printf("Movimento da Torre:\n");
+    
     for (int i = 1; i <= 5; i++) {
-        printf("Direita\n"); // Imprime a direção da casa
+        printf("Direita\n");
     }
 
-    printf("\n"); // Pula uma linha para separar os movimentos
+    printf("\n"); // Linha em branco para separar os movimentos
 
-    // Movimento do BISPO usando o WHILE
-    // O bispo se move 5 casas na diagonal para cima e para a direita
+    // ---------------------------
+    // Movimento do BISPO
+    // ---------------------------
+    // O bispo anda na diagonal, aqui vamos simular 5 passos para cima e para a direita
     printf("Movimento do Bispo:\n");
-    int j = 1; // Começamos do 1
+
+    int j = 1; // contador
     while (j <= 5) {
-        printf("Cima Direita\n"); // Imprime a direção da casa
-        j = j + 1; // Vai para a próxima casa
+        printf("Cima Direita\n");
+        j = j + 1;
     }
 
-    printf("\n"); // Pula uma linha para separar os movimentos
+    printf("\n"); // Linha em branco para separar os movimentos
 
-    // Movimento da RAINHA usando o DO-WHILE
-    // A rainha se move 8 casas para a esquerda
+    // ---------------------------
+    // Movimento da RAINHA
+    // ---------------------------
+    // A rainha anda para qualquer lado, aqui vamos simular 8 passos para a esquerda
     printf("Movimento da Rainha:\n");
-    int k = 1; // Começa do 1
-    do {
-        printf("Esquerda\n"); // Imprime a direção da casa
-        k = k + 1; // Vai para a próxima casa
-    } while (k <= 8); // Repete até chegar em 8
 
-    return 0; // Fim do programa
+    int k = 1; // contador
+    do {
+        printf("Esquerda\n");
+        k = k + 1;
+    } while (k <= 8);
+
+    printf("\n"); // Linha em branco para separar os movimentos
+
+    // ---------------------------
+    // Movimento do CAVALO
+    // ---------------------------
+    // O cavalo anda em "L": 2 passos para baixo e 1 para a esquerda
+    // Vamos usar dois loops: um for (obrigatório) e um while dentro dele
+
+    printf("Movimento do Cavalo:\n");
+
+    int quantidade_de_movimentos = 1; // Quantas vezes o cavalo vai andar em "L"
+
+    for (int m = 1; m <= quantidade_de_movimentos; m++) {
+        // Primeiro fazemos 2 passos para baixo
+        int contador_passos = 1;
+        while (contador_passos <= 2) {
+            printf("Baixo\n");
+            contador_passos = contador_passos + 1;
+        }
+
+        // Depois 1 passo para a esquerda
+        printf("Esquerda\n");
+    }
+
+    // Fim do programa
+    return 0;
 }
